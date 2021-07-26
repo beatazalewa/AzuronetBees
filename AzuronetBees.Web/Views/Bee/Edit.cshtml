@@ -1,0 +1,67 @@
+﻿@using AzuronetBees.Web.Models
+@model AzuronetBees.Web.Models.Bee
+
+@{ Layout = null; }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edycja</title>
+    <link type="text/css" rel="stylesheet" href="~/css/bee-styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Edycja rodziny pszczelej</h1>
+        <form method="post" enctype="multipart/form-data" asp-action="Edit">
+            <div asp-validation-summary="ModelOnly"></div>
+            <input type="hidden" asp-for="BeeId" />
+            <div class="form-field">
+                <label asp-for="Beehive"></label>
+                <select asp-for="BeehiveId" asp-items="ViewBag.BeehiveID">
+                    <option selected="selected" value="">Select</option>
+                </select>
+                <span asp-validation-for="BeehiveId"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="BreedOfBees"></label>
+                <select asp-for="BreedOfBees" asp-items="Html.GetEnumSelectList<BreedOfBees>()">
+                    <option selected="selected" value="">Select</option>
+                </select>
+                <span asp-validation-for="BreedOfBees"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="Description"></label>
+                <textarea asp-for="Description"></textarea>
+                <span asp-validation-for="Description"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="SwarmingBees"></label>
+                <input asp-for="SwarmingBees" />
+                <span asp-validation-for="SwarmingBees"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="Active"></label>
+                <input asp-for="Active" />
+                <span asp-validation-for="Active"></span>
+            </div>
+            <div class="form-field">
+                <label asp-for="Overall"></label>
+                <input asp-for="Overall" />
+                <span asp-validation-for="Overall"></span>
+            </div>
+            <div>
+                <input type="hidden" asp-for="ImageMimeType" />
+                <input type="hidden" asp-for="ImageName" />
+                @Html.HiddenFor(b => b.PhotoAvatar)
+                @Html.HiddenFor(b => b.PhotoFile)
+            </div>
+            <div class="form-field">
+                <input type="submit" value="Zapisz zmiany" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
