@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using AzuronetBees.Web.Data;
 using Microsoft.EntityFrameworkCore;
+using AzuronetBees.Web.Repositories;
 
 namespace AzuronetBees.Web
 {
@@ -22,6 +23,7 @@ namespace AzuronetBees.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IBeeRepository, BeeRepository>();
             services.AddControllersWithViews();
             services.AddDbContext<BeeContext>(options =>
            options.UseSqlite("Data Source=azuronetbees.db"));
