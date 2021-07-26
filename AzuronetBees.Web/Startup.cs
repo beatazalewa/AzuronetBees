@@ -52,8 +52,10 @@ namespace AzuronetBees.Web
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    name: "BeeRoute",
+                    pattern: "{controller}/{action}/{id?}",
+                    defaults: new { controller = "Bee", action = "Index" },
+                    constraints: new { id = "[0-9]+" });
             });
         }
     }
