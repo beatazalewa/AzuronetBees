@@ -20,6 +20,10 @@ namespace AzuronetBees.Web.Controllers
         private IBeeRepository _repository;
         private IWebHostEnvironment _environment;
 
+        public BeeController (IBeeRepository repository)
+        {
+            _repository = repository;
+        }
 
         public BeeController(ILogger<BeeController> logger, IBeeRepository repository, IWebHostEnvironment environment)
         {
