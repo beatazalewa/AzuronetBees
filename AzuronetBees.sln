@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzuronetBees.Web", "AzuronetBees.Web\AzuronetBees.Web.csproj", "{9E2C2545-C1C6-4592-81FA-9E24FA03BD08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzuronetBees.Web", "AzuronetBees.Web\AzuronetBees.Web.csproj", "{9E2C2545-C1C6-4592-81FA-9E24FA03BD08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzuronetBees.Tests", "AzuronetBees.Tests\AzuronetBees.Tests.csproj", "{F3C0B654-95BE-420C-B455-059167E420E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{9E2C2545-C1C6-4592-81FA-9E24FA03BD08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E2C2545-C1C6-4592-81FA-9E24FA03BD08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E2C2545-C1C6-4592-81FA-9E24FA03BD08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3C0B654-95BE-420C-B455-059167E420E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C0B654-95BE-420C-B455-059167E420E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C0B654-95BE-420C-B455-059167E420E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C0B654-95BE-420C-B455-059167E420E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
